@@ -37,7 +37,7 @@ function horoscopo(signoUser){
         case "piscis":
             horoscopo="seguirás igual de hippie";
             break;
-        default:
+         default:
             horoscopo ="pruebes con un signo del zodiaco";
     }
     return horoscopo
@@ -48,7 +48,7 @@ let unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
 alert (unHoroscopo);
 
 
-while(signoIngresado ==! horoscopo(signoUser)){
+while(signoIngresado != horoscopo(signoUser)){
     signoIngresado = prompt("Ingresá un signo astrológico válido");
     signoUser = signoIngresado.toLocaleLowerCase();
     unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
