@@ -10,7 +10,13 @@ function horoscopo(signoUser){
         case "geminis":
             horoscopo ="llamarás a tu mamá";
             break;
+        case "géminis":
+            horoscopo ="llamarás a tu mamá";
+            break;
         case "cancer":
+            horoscopo = "club día te dará un descuento en papas fritas";
+            break;
+        case "cáncer":
             horoscopo = "club día te dará un descuento en papas fritas";
             break;
         case "leo":
@@ -48,7 +54,7 @@ let unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
 alert (unHoroscopo);
 
 
-while(signoIngresado != horoscopo(signoUser)){
+while(signoIngresado !== horoscopo(signoUser)){
     signoIngresado = prompt("Ingresá un signo astrológico válido");
     signoUser = signoIngresado.toLocaleLowerCase();
     unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
