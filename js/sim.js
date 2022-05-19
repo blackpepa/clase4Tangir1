@@ -1,17 +1,26 @@
-function horoscopo(signoUser){
-    let horoscopo = " ";
-    switch(signoUser){
+let zodiaco = confirm("¿Querés que Madame LeFortune te cuente que te deparan los astros?");
+
+
+while(zodiaco){
+    let signoIngresado = prompt("Ingresá tu signo").toLowerCase();
+    alert("Madame LeFortune dice que " + horoscopo(signoIngresado));
+    zodiaco = confirm("¿Deseás consultar tu horóscopo nuevamente?");
+}
+
+function horoscopo(signoUser) {
+    let horoscopo
+    switch (signoUser) {
         case "aries":
-            horoscopo ="comerás buen jamón crudo. ";
+            horoscopo = "comerás buen jamón crudo. ";
             break;
         case "tauro":
             horoscopo = "tu inodoro quedará reluciente. ";
             break;
         case "geminis":
-            horoscopo ="llamarás a tu mamá. ";
+            horoscopo = "llamarás a tu mamá. ";
             break;
         case "géminis":
-            horoscopo ="llamarás a tu mamá. ";
+            horoscopo = "llamarás a tu mamá. ";
             break;
         case "cancer":
             horoscopo = "club día te dará un descuento en papas fritas. ";
@@ -29,36 +38,22 @@ function horoscopo(signoUser){
             horoscopo = "ese jean te volverá a entrar. ";
             break;
         case "escorpio":
-            horoscopo ="cantarás todo el día una canción de Arjona. ";
+            horoscopo = "cantarás todo el día una canción de Arjona. ";
             break;
         case "sagitario":
-            horoscopo= "tendrás que correr el bondi.";
+            horoscopo = "tendrás que correr el bondi.";
             break;
         case "capricornio":
-            horoscopo="pisarás caca de perro. ";
+            horoscopo = "pisarás caca de perro. ";
             break;
         case "acuario":
-            horoscopo="te caerá mal ese sushi. ";
+            horoscopo = "te caerá mal ese sushi. ";
             break;
         case "piscis":
-            horoscopo="seguirás igual de hippie.";
+            horoscopo = "seguirás igual de hippie.";
             break;
-         default:
-            horoscopo ="pruebes con un signo del zodiaco. ";
+        default:
+            horoscopo = "dice que sigas participando.";
     }
     return horoscopo
-    }
-let signoIngresado =  prompt ("Ingresá tu signo");
-let signoUser = signoIngresado.toLocaleLowerCase();
-let unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
-alert (unHoroscopo);
-
-while(signoIngresado !== horoscopo(signoUser)){
-    signoIngresado = prompt("Ingresá un signo astrológico válido");
-    signoUser = signoIngresado.toLocaleLowerCase();
-    unHoroscopo = "Madame LeFortune dice que " + horoscopo(signoUser);
-    let nuevaentrada = prompt (unHoroscopo + " Si querés hacer otra consulta ingresá el signo, sino cancelá.");
-     if(nuevaentrada != " "){
-         break;
-     }
 }
