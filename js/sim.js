@@ -53,7 +53,8 @@ function horoscopo(signoUser) {
             horoscopo = "seguirás igual de hippie.";
             break;
         default:
-            horoscopo = "dice que sigas participando.";
+            horoscopo = "eso no es un signo, seguí participando.";
     }
     return horoscopo
 }
+
